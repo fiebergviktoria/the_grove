@@ -1,0 +1,70 @@
+@use '../abstracts/variables' as *;
+
+html {
+    background-color: $light_gray;
+}
+
+footer {
+    background-color: $dark_neutral;
+    color: $light_gray;
+}
+
+nav {
+    a {
+        background-color: $dark_neutral;
+        color: $light_gray;
+        text-align: center;
+        //padding: $defaultem;
+        width: 25%;
+    }
+}
+
+
+.sign_link {
+    background-color: $light_green;
+    padding: $defaultem;
+    border-radius: $defaultem;
+}
+
+
+.lightneutral {
+    background-color: $light_neutral;
+}
+
+.lightgray {
+    background-color: $light_gray;
+}
+
+.lightgreen {
+    background-color: $light_green;
+
+    a:link {
+        color: #1d1d5c;
+    }
+
+    a:visited {
+        color: #2f1d3d;
+    }
+
+    a:active {
+        color: #511e1e;
+    }
+}
+
+/*style links in this order: a:link, a:visited, a:focus, a:hover, a:active
+links should at least be: underlined (other elements shouldn't, react when they are hovered/focused
+and in a different way when activated*/
+
+footer {
+    a:link {
+        color: #CFCFF4;
+    }
+    
+    a:visited {
+        color: #ddc6e4;
+    }
+    
+    a:active {
+        color: #f4cfcf;
+    }
+}

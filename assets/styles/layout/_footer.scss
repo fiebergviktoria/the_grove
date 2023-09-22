@@ -1,0 +1,6 @@
+@use '../abstracts/variables';
+/*footer rules*/
+footer {
+    margin-top: variables.$defaultem;
+    padding: variables.$defaultem;
+}

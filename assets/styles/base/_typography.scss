@@ -1,0 +1,42 @@
+@use '../abstracts/variables' as *;
+
+/*typography rules*/
+html {
+    font-family: "Bodoni MT", "Bodoni 72", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+    color: $dark_gray;
+}
+
+main {
+    font-size: calc($defaultem + 0.25vw);
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Didot, "Didot LT STD", "Hoefler Text", Garamond, "Calisto MT", "Times New Roman", serif;
+    line-height: 1.6;
+}
+
+h1 {
+    color: $dark_neutral;
+    font-size: calc(3 * $defaultem + 0.25vw);
+}
+
+h2 {
+    font-size: calc(2.5 * $defaultem + 0.25vw);
+}
+
+h3 {
+    font-size: calc(1.5 * $defaultem + 0.25vw);
+}
+
+h4 {
+    font-size: calc(1.3 * $defaultem + 0.25vw);
+}
+
+h5 {
+    font-size: calc(1.2 * $defaultem + 0.25vw);
+}
+
+h6 {
+    font-size: calc(1.1 * $defaultem + 0.25vw);
+}

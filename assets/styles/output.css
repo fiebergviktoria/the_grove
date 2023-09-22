@@ -1,0 +1,248 @@
+/*reset rules*/
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0 2em 2em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+figure {
+  margin: 0;
+  display: inline-block;
+  text-align: center;
+}
+
+/*images are never larger than their container*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style-position: inside;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  display: inline-block;
+}
+
+/*table rules*/
+/*table-layout: fixed -> table behaves more predictably, columns follow width of their headings
+border-collapse: collapse -> borders collapse into one*/
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  line-height: 1;
+  font-size: calc(0.75em + 0.25vw);
+  overflow-wrap: break-word;
+  padding: 0.25em 0.5em 0.5em 0.5em;
+}
+
+/*enable horizontal scrolling for tables
+.fig-table {
+    max-width: 100%; 
+    overflow-x: scroll;
+}*/
+/*style links in this order: a:link, a:visited, a:focus, a:hover, a:active
+links should at least be: underlined (other elements shouldn't, react when they are hovered/focused
+and in a different way when activated*/
+/*form rules*/
+button, input, select, textarea, label {
+  font-family: inherit;
+  font-size: 100%;
+  display: block;
+}
+
+button, input, select, textarea {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  /*width + height*/
+}
+
+/* add usability/accessibility via input:focus, textarea:focus {styles}*/
+textarea {
+  overflow: auto;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/*typography rules*/
+html {
+  font-family: "Bodoni MT", "Bodoni 72", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+  color: #262626;
+}
+
+main {
+  font-size: calc(1em + 0.25vw);
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Didot, "Didot LT STD", "Hoefler Text", Garamond, "Calisto MT", "Times New Roman", serif;
+  line-height: 1.6;
+}
+
+h1 {
+  color: #36454F;
+  font-size: calc(3em + 0.25vw);
+}
+
+h2 {
+  font-size: calc(2.5em + 0.25vw);
+}
+
+h3 {
+  font-size: calc(1.5em + 0.25vw);
+}
+
+h4 {
+  font-size: calc(1.3em + 0.25vw);
+}
+
+h5 {
+  font-size: calc(1.2em + 0.25vw);
+}
+
+h6 {
+  font-size: calc(1.1em + 0.25vw);
+}
+
+/*footer rules*/
+footer {
+  margin-top: 1em;
+  padding: 1em;
+}
+
+@supports (display: grid) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 1em;
+  }
+  header {
+    grid-column: 1/10;
+    display: flex;
+  }
+  .sign {
+    grid-column: 10/12;
+    place-self: center;
+    position: sticky;
+    top: 0;
+    border-top: solid 2em #f2f2f2;
+  }
+  .modus {
+    grid-column: 12;
+    place-self: center;
+    position: sticky;
+    top: 0;
+    border-top: solid 2em #f2f2f2;
+  }
+  .gridfigure {
+    grid-column: 4/10;
+  }
+  .gridtext {
+    grid-column: 3/7;
+  }
+  .gridform {
+    grid-column: 8/12;
+  }
+}
+/*header rules*/
+header {
+  position: sticky;
+  top: 0;
+  border-top: solid 2em #f2f2f2;
+  padding: 1em;
+}
+
+.outside {
+  position: relative;
+  left: -0.6666666667em;
+}
+
+html {
+  background-color: #f2f2f2;
+}
+
+footer {
+  background-color: #36454F;
+  color: #f2f2f2;
+}
+
+nav a {
+  background-color: #36454F;
+  color: #f2f2f2;
+  text-align: center;
+  width: 25%;
+}
+
+.sign_link {
+  background-color: #6ec09e;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+.lightneutral {
+  background-color: #DCCCB5;
+}
+
+.lightgray {
+  background-color: #f2f2f2;
+}
+
+.lightgreen {
+  background-color: #6ec09e;
+}
+.lightgreen a:link {
+  color: #1d1d5c;
+}
+.lightgreen a:visited {
+  color: #2f1d3d;
+}
+.lightgreen a:active {
+  color: #511e1e;
+}
+
+/*style links in this order: a:link, a:visited, a:focus, a:hover, a:active
+links should at least be: underlined (other elements shouldn't, react when they are hovered/focused
+and in a different way when activated*/
+footer a:link {
+  color: #CFCFF4;
+}
+footer a:visited {
+  color: #ddc6e4;
+}
+footer a:active {
+  color: #f4cfcf;
+}
+
+/*# sourceMappingURL=output.css.map */
