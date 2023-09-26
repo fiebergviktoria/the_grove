@@ -3,4 +3,12 @@
 footer {
     margin-top: variables.$defaultem;
     padding: variables.$defaultem;
+
+    @supports(display: grid) {
+        display: grid;
+        grid-template-columns: 20% repeat(6, 1fr);
+        column-gap: variables.$defaultem;
+        place-items: center;
+    }
+
 }

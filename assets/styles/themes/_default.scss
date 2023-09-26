@@ -1,5 +1,6 @@
 @use '../abstracts/variables' as *;
 
+/*default rules*/
 html {
     background-color: $light_gray;
 }
@@ -10,12 +11,14 @@ footer {
 }
 
 nav {
+    width: 100%;
     a {
         background-color: $dark_neutral;
         color: $light_gray;
+        padding: $defaultem;
+        width: 20%;
         text-align: center;
-        //padding: $defaultem;
-        width: 25%;
+        border-radius: $defaultem;
     }
 }
 
