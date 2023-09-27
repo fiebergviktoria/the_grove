@@ -1,45 +1,18 @@
 @use '../abstracts/variables';
-@use '../abstracts/mixins';
 
 /*grid rules*/
 @supports(display: grid) {
     .container {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
-        column-gap: variables.$defaultem;
     }
-
-    header {
-        grid-column: 1/10;
-    }
-
-    .sign {
-        grid-column: 10/12;
-        place-self: center;
-        position: sticky;
-        top: 0;
-        border-top: solid calc(2 * variables.$defaultem) variables.$light_gray;
-    }
-
-    .modus {
-        grid-column: 12;
-        place-self: center;
-        position: sticky;
-        top: 0;
-        border-top: solid calc(2 * variables.$defaultem) variables.$light_gray;
-    }
-
     .gridfigure {
         grid-column: 1/10;
     }
-
     .gridtext {
         grid-column: 3/7;
-
     }
-
     .gridform {
         grid-column: 8/12;
-
     }
 }

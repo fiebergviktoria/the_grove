@@ -1,13 +1,12 @@
-@use '../abstracts/variables';
 /*footer rules*/
 footer {
-    margin-top: variables.$defaultem;
-    padding: variables.$defaultem;
+    margin-top: 1em;
+    padding: 1em;
 
     @supports(display: grid) {
         display: grid;
         grid-template-columns: 20% repeat(6, 1fr);
-        column-gap: variables.$defaultem;
+        column-gap: 1em;
         place-items: center;
     }
 
