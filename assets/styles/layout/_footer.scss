@@ -1,13 +1,43 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
 /*footer rules*/
 footer {
-    margin-top: 1em;
-    padding: 1em;
+    margin-top: 4em;
+    padding: 5em 2em;
 
     @supports(display: grid) {
         display: grid;
-        grid-template-columns: 20% repeat(6, 1fr);
-        column-gap: 1em;
+        grid-template-areas: 
+        "logo . . . . ."
+        ". sign courses grove contact legal";
+        grid-template-columns: 30% repeat(5, 1fr);
+        grid-template-rows: 1fr 1fr;
+        row-gap: 2em;
         place-items: center;
     }
 
+    @include mixins.gridareas(variables.$footer_areas, footer);
+
+    .grid-item1 {
+        justify-self: start;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 1em;
+    }
+
+    .grid-item2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 0.5em;
+        a {
+            background-color: variables.$light_green;
+            display: inline-block;
+            width: 6em;
+            text-align: center;
+            padding: 1em;
+            border-radius: 1em;
+            color: variables.$dark_gray;
+        }
+    }
 }

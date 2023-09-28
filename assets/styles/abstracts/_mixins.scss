@@ -1,9 +1,11 @@
-@mixin gridareas($areas) {
+@mixin gridareas($areas, $container) {
     @for $i from 1 through (length($areas)) {
         .grid-item#{$i} {
             grid-area: nth($areas, $i);
-            display: grid;
-            padding-top: 1em;
+            @if $container == header {
+                display: grid;
+                padding-top: 1em;
+            }
         }
     }
 }

@@ -16,7 +16,7 @@ header {
         grid-template-rows: repeat(2, 1fr);
     }
 
-    @include mixins.gridareas(variables.$header_areas);
+    @include mixins.gridareas(variables.$header_areas, header);
 
     .grid-item1 {
         background-color: variables.$light_neutral;
@@ -25,13 +25,17 @@ header {
     }
     .grid-item2 {
         background-color: variables.$light_neutral;
-        grid-template-columns: repeat(4, 25%);
+        grid-template-columns: repeat(4, 1fr);
         place-items: center;
     }
     .grid-item3 {
         background-color: variables.$light_gray;
         grid-template-columns: 1fr 1fr;
         place-items: center;
+        a {
+            width: 5.25em;
+            text-align: center;
+        }
     }
     .grid-item4 {
         background-color: variables.$light_gray;

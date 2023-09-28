@@ -34,10 +34,6 @@ ul {
   padding: 0;
 }
 
-a {
-  display: inline-block;
-}
-
 /*table rules*/
 /*table-layout: fixed -> table behaves more predictably, columns follow width of their headings
 border-collapse: collapse -> borders collapse into one*/
@@ -136,16 +132,56 @@ h6 {
 
 /*footer rules*/
 footer {
-  margin-top: 1em;
-  padding: 1em;
+  margin-top: 4em;
+  padding: 5em 2em;
 }
 @supports (display: grid) {
   footer {
     display: grid;
-    grid-template-columns: 20% repeat(6, 1fr);
-    column-gap: 1em;
+    grid-template-areas: "logo . . . . ." ". sign courses grove contact legal";
+    grid-template-columns: 30% repeat(5, 1fr);
+    grid-template-rows: 1fr 1fr;
+    row-gap: 2em;
     place-items: center;
   }
+}
+footer .grid-item1 {
+  grid-area: logo;
+}
+footer .grid-item2 {
+  grid-area: sign;
+}
+footer .grid-item3 {
+  grid-area: courses;
+}
+footer .grid-item4 {
+  grid-area: grove;
+}
+footer .grid-item5 {
+  grid-area: contact;
+}
+footer .grid-item6 {
+  grid-area: legal;
+}
+footer .grid-item1 {
+  justify-self: start;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 1em;
+}
+footer .grid-item2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 0.5em;
+}
+footer .grid-item2 a {
+  background-color: #6ec09e;
+  display: inline-block;
+  width: 6em;
+  text-align: center;
+  padding: 1em;
+  border-radius: 1em;
+  color: #262626;
 }
 
 /*grid rules*/
@@ -158,7 +194,7 @@ footer {
     grid-column: 1/10;
   }
   .gridtext {
-    grid-column: 3/7;
+    grid-column: 2/6;
   }
   .gridform {
     grid-column: 8/12;
@@ -220,13 +256,17 @@ header .grid-item1 {
 }
 header .grid-item2 {
   background-color: #DCCCB5;
-  grid-template-columns: repeat(4, 25%);
+  grid-template-columns: repeat(4, 1fr);
   place-items: center;
 }
 header .grid-item3 {
   background-color: #f2f2f2;
   grid-template-columns: 1fr 1fr;
   place-items: center;
+}
+header .grid-item3 a {
+  width: 5.25em;
+  text-align: center;
 }
 header .grid-item4 {
   background-color: #f2f2f2;
@@ -247,6 +287,12 @@ header .grid-item7 {
 .outside {
   position: relative;
   left: -0.5em;
+}
+
+/*nav rules*/
+nav a {
+  width: 5.5em;
+  text-align: center;
 }
 
 /*default rules*/
