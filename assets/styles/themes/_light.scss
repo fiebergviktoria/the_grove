@@ -1,8 +1,23 @@
 @use '../abstracts/variables' as *;
 
-/*default rules*/
+/*light theme rules*/
 html {
     background-color: $light_gray;
+    color: $dark_gray;
+}
+
+h1 {
+    color: $dark_neutral;
+}
+
+.account-link-color {
+    background-color: $light_green;
+    color: $dark_gray;
+}
+
+.navigation-link-color {
+    background-color: $dark_neutral;
+    color: $light_gray;
 }
 
 footer {
@@ -10,28 +25,19 @@ footer {
     color: $light_gray;
 }
 
-nav {
-    a {
-        background-color: $dark_neutral;
-        color: $light_gray;
-    }
-}
-
-
-.sign_link {
-    background-color: $light_green;
-}
-
-
-.lightneutral {
+.color-theme-neutral {
     background-color: $light_neutral;
 }
 
-.lightgray {
+.color-theme-gray {
     background-color: $light_gray;
 }
 
-.lightgreen {
+/*style links in this order: a:link, a:visited, a:focus, a:hover, a:active
+links should at least be: underlined (other elements shouldn't, react when they are hovered/focused
+and in a different way when activated*/
+
+.color-theme-green {
     background-color: $light_green;
 
     a:link {
@@ -46,10 +52,6 @@ nav {
         color: #511e1e;
     }
 }
-
-/*style links in this order: a:link, a:visited, a:focus, a:hover, a:active
-links should at least be: underlined (other elements shouldn't, react when they are hovered/focused
-and in a different way when activated*/
 
 footer {
     a:link {

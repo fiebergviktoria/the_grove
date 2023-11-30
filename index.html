@@ -1,142 +1,140 @@
 <!DOCTYPE html>
-<!-- DOCTYPE: declares html-document-->
-<!-- root-element, set languague of document with lang-attribute-->
 <html lang="en">
-    <!-- everything that isn’t content shown on the page: page description, CSS, character set declaration -->
-    <head>
-        <meta charset="utf-8">
-        <meta name="author" content="viktoria fieberg">
-        <meta name="description" content="index landing page grove">
-        <!-- page scales to viewport, scaling possible, initial-scale=1.0 presents content 1:1 -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- in browser tab, suggested bookmark name, search results -->
-        <title>The Grove</title>
-        <!-- integrate external CSS-file -->
-        <link rel="stylesheet" href="assets/styles/output.css">
-        <!-- integrate external JavaScript-file, scripts will execute once everything has finished loading, scripts need to wait for parsing-->
-   <script src="assets/scripts/template.js" defer></script>
-    </head>
-    <!-- visible content -->
-    <body>
-    <main>
-		<header>
-      <section class="grid-item1">
-        <a href="index.html">
-          <h1 class="outside">The Grove</h1>
-          </a>
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="viktoria fieberg">
+    <meta name="description" content="index landing page grove">
+    <!-- page scales to viewport, scaling possible, initial-scale=1.0 presents content 1:1 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Grove</title>
+    <link rel="stylesheet" href="assets/styles/output.css">
+    <!-- defer-attribute: scripts will execute once everything has finished loading, scripts need to wait for parsing-->
+    <script src="assets/scripts/template.js" defer></script>
+  </head>
+
+  <body>
+    <div class="sticky color-theme-gray">
+		  <header class="color-theme-neutral">
+        <hgroup>
+          <h1 class="position-heading-outside heading"><a href="index.html">The Grove</a></h1>
+          <p>sun salutations, mindful moments and cozy corners</p>
+        </hgroup>
         <img src="assets/images/illustrations/the_grove_light.svg" alt="logo light design" width="100" height="104">
-        </section>
-        <p class="grid-item5">sun salutations, mindful moments and cozy corners</p>
-      <nav class="grid-item2">
-        <a href="courses.html">courses</a>
-        <a href="studio.html">studio</a>
-        <a href="team.html">team</a>
-        <a href="contact.html">contact</a>
+        <!--<span class="grid-item6"></span>
+        <span class="grid-item7"></span>-->
+      </header>
+      <nav class="navigation">
+        <a href="courses.html" class="navigation-link navigation-link-color">courses</a>
+        <a href="studio.html" class="navigation-link navigation-link-color">studio</a>
+        <a href="team.html" class="navigation-link navigation-link-color">team</a>
+        <a href="contact.html" class="navigation-link navigation-link-color">contact</a>
+        <a class="account-link-color navigation-link">sign in</a>
+        <a class="account-link-color navigation-link">sign up</a>
+        <button type="button" class="change-theme">Placeholder</button>
       </nav>
-      <span class="grid-item3">
-        <a class="sign_link">sign in</a>
-        <a class="sign_link">sign up</a>
-      </span>
-      <span class="grid-item4"><button type="button">Placeholder</button></span>
-      <span class="grid-item6"></span>
-      <span class="grid-item7"></span>
-    </header>
-    <section class="container">
-      <figure class="lightneutral gridfigure">
-      <img src="assets/images/illustrations/downward_dog.svg" alt="yoga pose illustration" width="360" height="270">
-      </figure>
-      <p class="gridtext">welcome to the grove, we are happy you have found your way here,
-        why don't you take a few moments for yourself? take a seat and breathe for a bit
-      </p>
-      <div class="lightgreen gridform">
-      <form>
-        <h4>new here?</h4>
-        <label>E-Mail:<input type="email"></label>
-        <label>Password:<input type="password"></label>
-        <!--password requirements: Must be 8 or more characters and contain at least 1 number 
-        and 1 special character-->
-        <button type="submit">sign in</button>
-        <button type="button">facebook</button>
-        <button type="button">google</button>
-      </form>
-      <form>
-        <h4>already been here?</h4>
-        <label>E-Mail:<input type="email"></label>
-          <label>Password:<input type="password"></label>
-          <!--remember me field-->
-        <!--password requirements: Must be 8 or more characters and contain at least 1 number 
-        and 1 special character-->
-        <button type="submit">sign in</button>
-        <!--forgot password-link-->
-        <button type="button">facebook</button>
-        <button type="button">google</button>
-      </form>
-      <h3>want to try it first?</h3>
     </div>
-    <figure class="lightneutral gridfigure">
-      <img src="assets/images/illustrations/the_grove_light.svg" alt="logo" width="360" height="270">
-    </figure>
-      <p class="gridtext">no matter if you are a beginner or an expert everyone is welcome in the grove,
-         to help you on this journey we offer a free trial course,
-         just pick a date and time from the following list</p>
-      <div class="lightgreen gridform">
-        <form>
-          <input type="radio" name="nextcourse" id="courseone"><label for="courseone">course one</label>
-          <input type="radio" name="nextcourse" id="coursetwo"><label for="coursetwo">course two</label>
-      <button type="submit">i want to try</button>
-      <a href="courses.html">show me the other dates</a>
-    </form>
-      <h3>want to take a peek first?</h3>
-    </div>
-      <figure class="lightneutral gridfigure">
-      <img src="assets/images/studio/studio_inside_scaled.jpg" alt="studio/team picture" width="360" height="270">
+    <main class="main">
+      <figure class="color-theme-neutral">
+        <img src="assets/images/illustrations/downward_dog.svg" alt="yoga pose illustration" width="360" height="270">
       </figure>
-      <p class="gridtext">it is important to take a break from everyday life now and then,
-          to support this short leave we strive for a relaxed atmosphere</p>
-      <div class="lightgreen gridform">
-      <p>see for yourself and <a href="studio.html">take a tour through our studio</a> or <a href="team.html">meet the team</a></p>
-      <h3>want to venture forth with us?</h3>
-      </div>
-      <figure class="lightneutral gridfigure">
-      <img src="../cozy_corners/assets/images/library/library01_scaled.jpg" alt="cafe library" width="360" height="270">
+      <section>
+        <h2 class="heading">welcome to the grove</h2>
+        <aside>we are happy you have found your way here, why don't you take a few moments for yourself?
+           take a seat and breathe for a bit...</aside>
+        <section class="color-theme-green">
+          <h3 class="heading">new here?</h3>
+          <form>
+            <label>E-Mail:<input type="email"></label>
+            <label>Password:<input type="password"></label>
+            <!--password requirements: Must be 8 or more characters and contain at least 1 number and 1 special character-->
+            <button type="submit">sign in</button>
+            <button type="button">facebook</button>
+            <button type="button">google</button>
+          </form>
+          <h3 class="heading">already been here?</h3>
+          <form>
+            <label>E-Mail:<input type="email"></label>
+            <label>Password:<input type="password"></label>
+            <!--add a remember me field-->
+            <!--password requirements: Must be 8 or more characters and contain at least 1 number and 1 special character-->
+            <button type="submit">sign in</button>
+            <!--add a forgot password-link-->
+            <button type="button">facebook</button>
+            <button type="button">google</button>
+          </form>
+        </section>
+      </section>
+      <figure class="color-theme-neutral">
+        <img src="assets/images/illustrations/the_grove_light.svg" alt="logo" width="360" height="270">
       </figure>
-      <p class="gridtext">if you want to extend your stay with us or yoga just isn't for you</p>
-      <div class="lightgreen gridform">
-      <p>come and visit our <a href="../cozy_corners/index.html">cozy corners</a></p>
-      </div>
-    </section>
+      <section>
+        <h2 class="heading">want to try it first?</h2>
+        <aside>no matter if you are a beginner or an expert everyone is welcome in the grove,
+          to help you on this journey we offer a free trial course,
+          just pick a date and time from the following list</aside>
+        <section class="color-theme-green">
+          <h3 class="heading">registration:</h3>
+          <form>
+            <input type="radio" name="nextcourse" id="courseone"><label for="courseone">course one</label>
+            <input type="radio" name="nextcourse" id="coursetwo"><label for="coursetwo">course two</label>
+            <button type="submit">i want to try</button>
+            <a href="courses.html">show me the other dates</a>
+          </form>
+        </section>
+      </section>
+      <figure class="color-theme-neutral">
+        <img src="assets/images/studio/studio_inside_scaled.jpg" alt="studio/team picture" width="360" height="270">
+      </figure>
+      <section>
+        <h2 class="heading">want to take a peek first?</h2>
+        <aside>it is important to take a break from everyday life now and then,
+          to support this short leave we strive for a relaxed atmosphere</aside>
+        <section class="color-theme-green">
+          <h3 class="heading">see for yourself</h3>
+          <a href="studio.html">take a tour through our studio</a> or <a href="team.html">meet the team</a>
+        </section>
+      </section>
+      <figure class="color-theme-neutral">
+        <img src="../cozy_corners/assets/images/library/library01_scaled.jpg" alt="cafe library" width="360" height="270">
+      </figure>
+      <section>
+        <h2 class="heading">want to venture forth with us?</h2>
+        <aside>if you want to extend your stay with us or yoga just isn't for you</aside>
+        <section class="color-theme-green">
+          <h3 class="heading">cozy corners</h3>
+          <p>come and visit our <a href="../cozy_corners/index.html">cafe</a></p>
+        </section>
+      </section>
     </main>
-		<footer>
-      <section class="grid-item1">
-        <a href="index.html">
-          <h2>The Grove</h2>
-          </a>
+		<footer class="sticky">
+      <section class="inline-block">
+        <a href="index.html"><h2 class="heading">The Grove</h2></a>
         <img src="assets/images/illustrations/the_grove_light.svg" alt="logo light design" width="100" height="104">
       </section>
-        <div class="grid-item2">
-      <a>sign in</a>
-      <a>sign up</a>
-        </div>
-      <ul class="grid-item3">Courses:
-        <li><a href="courses.html">Yoga</a></li>
-        <li><a href="courses.html">Pilates</a></li>
-        <li><a href="courses.html">Meditation</a></li>
-      </ul>
-      <ul class="grid-item4">The Grove:
-        <li><a href="team.html">The Team</a></li>
-        <li><a href="studio.html">The Studio</a></li>
-        <li><a href="../cozy_corners/index.html">Cozy Corners</a></li>
-        <!--maybe add the shop-->
-      </ul>
-      <ul class="grid-item5">Reach Out:
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="application.html">Work with Us</a></li>
-      </ul>
-      <ul class="grid-item6">Legal Stuff:
-        <li><a href="imprint.html">Imprint</a></li>
-        <li><a href="privacy_policy.html">Privacy Policy</a></li>
-        <li><a href="agbs.html">AGBs</a></li>
-      </ul>
+      <nav class="footer-navigation inline-block">
+        <a class="account-link-color navigation-link">sign in</a>
+        <a class="account-link-color navigation-link">sign up</a>
+        <ul class="inline-block">Courses:
+          <li><a href="courses.html">Yoga</a></li>
+          <li><a href="courses.html">Pilates</a></li>
+          <li><a href="courses.html">Meditation</a></li>
+        </ul>
+        <ul class="inline-block">The Grove:
+          <li><a href="team.html">The Team</a></li>
+          <li><a href="studio.html">The Studio</a></li>
+          <li><a href="../cozy_corners/index.html">Cozy Corners</a></li>
+          <!--maybe add the shop-->
+        </ul>
+        <ul class="inline-block">Reach Out:
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="application.html">Work with Us</a></li>
+        </ul>
+        <ul class="inline-block">Legal Stuff:
+          <li><a href="imprint.html">Imprint</a></li>
+          <li><a href="privacy_policy.html">Privacy Policy</a></li>
+          <li><a href="agbs.html">AGBs</a></li>
+        </ul>
+      </nav>
     </footer>
-    </body>
+  </body>
 </html>

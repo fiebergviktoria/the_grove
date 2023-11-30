@@ -1,4 +1,4 @@
-/*reset rules*/
+/*base rules*/
 html {
   box-sizing: border-box;
 }
@@ -8,10 +8,6 @@ html {
 }
 
 body {
-  margin: 0 2em 2em;
-}
-
-h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
@@ -19,7 +15,7 @@ figure {
   margin: 0;
   display: inline-block;
   text-align: right;
-  padding: 1em;
+  padding: 1rem;
 }
 
 /*images are never larger than their container*/
@@ -30,32 +26,59 @@ img {
 
 ul {
   list-style-position: inside;
-  margin: 0;
+  margin: 1rem;
   padding: 0;
 }
 
-/*table rules*/
-/*table-layout: fixed -> table behaves more predictably, columns follow width of their headings
-border-collapse: collapse -> borders collapse into one*/
-table {
-  table-layout: fixed;
-  border-collapse: collapse;
-  width: 100%;
+/*Remove all animations, transitions and smooth scroll for people that prefer not to see them.*/
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.main {
+  margin: 2rem;
 }
 
-th, td {
-  text-align: left;
-  line-height: 1;
-  font-size: calc(0.75em + 0.25vw);
-  overflow-wrap: break-word;
-  padding: 0.25em 0.5em 0.5em 0.5em;
+.heading {
+  margin: 0;
 }
 
-/*enable horizontal scrolling for tables
-.fig-table {
-    max-width: 100%; 
-    overflow-x: scroll;
-}*/
+.sticky {
+  position: sticky;
+  top: 0;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+/*typography rules*/
+html {
+  font-family: "Bodoni MT", "Bodoni 72", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+}
+
+body {
+  font-size: calc(1rem + 0.25vw);
+  line-height: 1.5;
+}
+
+.heading {
+  font-family: Didot, "Didot LT STD", "Hoefler Text", Garamond, "Calisto MT", "Times New Roman", serif;
+  line-height: 1.6;
+}
+
+/*footer rules*/
+footer {
+  padding: 2rem 4rem;
+}
+
 /*form rules*/
 button, input, select, textarea, label {
   font-family: inherit;
@@ -67,7 +90,7 @@ button, input, select, textarea {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  /*width + height*/
+  /*add width + height*/
 }
 
 /* add usability/accessibility via input:focus, textarea:focus {styles}*/
@@ -75,240 +98,52 @@ textarea {
   overflow: auto;
 }
 
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+/*header rules*/
+header {
+  margin: 0 2rem;
+  padding: 2rem;
 }
-/*typography rules*/
+
+/*nav rules*/
+.navigation {
+  margin: 2rem;
+  padding: 0 1.5rem;
+}
+
+.navigation-link {
+  display: inline-block;
+  width: calc(6rem + 0.25vw);
+  text-align: center;
+  margin: 0.5rem;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+/*button rules*/
+.change-theme {
+  display: inline-block;
+  width: calc(6rem + 0.25vw);
+  margin-left: 0.5rem;
+}
+
+/*light theme rules*/
 html {
-  font-family: "Bodoni MT", "Bodoni 72", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+  background-color: #f2f2f2;
   color: #262626;
-}
-
-main {
-  font-size: calc(1em + 0.25vw);
-  line-height: 1.5;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: Didot, "Didot LT STD", "Hoefler Text", Garamond, "Calisto MT", "Times New Roman", serif;
-  line-height: 1.6;
 }
 
 h1 {
   color: #36454F;
-  font-size: calc(3em + 0.25vw);
 }
 
-h2 {
-  font-size: calc(2.5em + 0.25vw);
-}
-
-h3 {
-  font-size: calc(1.5em + 0.25vw);
-}
-
-h4 {
-  font-size: calc(1.3em + 0.25vw);
-}
-
-h5 {
-  font-size: calc(1.2em + 0.25vw);
-}
-
-h6 {
-  font-size: calc(1.1em + 0.25vw);
-}
-
-/*footer rules*/
-footer {
-  margin-top: 4em;
-  padding: 5em 2em;
-}
-@supports (display: grid) {
-  footer {
-    display: grid;
-    grid-template-areas: "logo . . . . ." ". sign courses grove contact legal";
-    grid-template-columns: 30% repeat(5, 1fr);
-    grid-template-rows: 1fr 1fr;
-    row-gap: 2em;
-    place-items: center;
-  }
-}
-footer .grid-item1 {
-  grid-area: logo;
-}
-footer .grid-item2 {
-  grid-area: sign;
-}
-footer .grid-item3 {
-  grid-area: courses;
-}
-footer .grid-item4 {
-  grid-area: grove;
-}
-footer .grid-item5 {
-  grid-area: contact;
-}
-footer .grid-item6 {
-  grid-area: legal;
-}
-footer .grid-item1 {
-  justify-self: start;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  column-gap: 1em;
-}
-footer .grid-item2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 0.5em;
-}
-footer .grid-item2 a {
+.account-link-color {
   background-color: #6ec09e;
-  display: inline-block;
-  width: 6em;
-  text-align: center;
-  padding: 1em;
-  border-radius: 1em;
   color: #262626;
 }
 
-/*grid rules*/
-@supports (display: grid) {
-  .container {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-  }
-  .gridfigure {
-    grid-column: 1/10;
-  }
-  .gridtext {
-    grid-column: 2/6;
-  }
-  .gridform {
-    grid-column: 8/12;
-  }
-}
-/*header rules*/
-header {
-  position: sticky;
-  top: 0;
-  border-top: solid 2em #f2f2f2;
-}
-@supports (display: grid) {
-  header {
-    display: grid;
-    grid-template-areas: "logo logo logo logo nav nav nav nav nav sign sign modus" "motto motto motto motto neutral neutral neutral neutral neutral lgray lgray lgray";
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-  }
-}
-header .grid-item1 {
-  grid-area: logo;
-  display: grid;
-  padding-top: 1em;
-}
-header .grid-item2 {
-  grid-area: nav;
-  display: grid;
-  padding-top: 1em;
-}
-header .grid-item3 {
-  grid-area: sign;
-  display: grid;
-  padding-top: 1em;
-}
-header .grid-item4 {
-  grid-area: modus;
-  display: grid;
-  padding-top: 1em;
-}
-header .grid-item5 {
-  grid-area: motto;
-  display: grid;
-  padding-top: 1em;
-}
-header .grid-item6 {
-  grid-area: neutral;
-  display: grid;
-  padding-top: 1em;
-}
-header .grid-item7 {
-  grid-area: lgray;
-  display: grid;
-  padding-top: 1em;
-}
-header .grid-item1 {
-  background-color: #DCCCB5;
-  grid-template-columns: 2fr 1fr;
-  place-items: center;
-}
-header .grid-item2 {
-  background-color: #DCCCB5;
-  grid-template-columns: repeat(4, 1fr);
-  place-items: center;
-}
-header .grid-item3 {
-  background-color: #f2f2f2;
-  grid-template-columns: 1fr 1fr;
-  place-items: center;
-}
-header .grid-item3 a {
-  width: 5.25em;
-  text-align: center;
-}
-header .grid-item4 {
-  background-color: #f2f2f2;
-  place-items: center;
-}
-header .grid-item5 {
-  background-color: #DCCCB5;
-  margin: 0;
-  place-items: center;
-}
-header .grid-item6 {
-  background-color: #DCCCB5;
-}
-header .grid-item7 {
-  background-color: #f2f2f2;
-}
-
-.outside {
-  position: relative;
-  left: -0.5em;
-}
-
-/*nav rules*/
-nav a {
-  width: 5.5em;
-  text-align: center;
-}
-
-/*default rules*/
-nav a {
-  padding: 1em;
-  border-radius: 1em;
-}
-
-.sign_link {
-  padding: 1em;
-  border-radius: 1em;
-}
-
-/*default rules*/
-html {
-  background-color: #f2f2f2;
+.navigation-link-color {
+  background-color: #36454F;
+  color: #f2f2f2;
 }
 
 footer {
@@ -316,39 +151,30 @@ footer {
   color: #f2f2f2;
 }
 
-nav a {
-  background-color: #36454F;
-  color: #f2f2f2;
-}
-
-.sign_link {
-  background-color: #6ec09e;
-}
-
-.lightneutral {
+.color-theme-neutral {
   background-color: #DCCCB5;
 }
 
-.lightgray {
+.color-theme-gray {
   background-color: #f2f2f2;
-}
-
-.lightgreen {
-  background-color: #6ec09e;
-}
-.lightgreen a:link {
-  color: #1d1d5c;
-}
-.lightgreen a:visited {
-  color: #2f1d3d;
-}
-.lightgreen a:active {
-  color: #511e1e;
 }
 
 /*style links in this order: a:link, a:visited, a:focus, a:hover, a:active
 links should at least be: underlined (other elements shouldn't, react when they are hovered/focused
 and in a different way when activated*/
+.color-theme-green {
+  background-color: #6ec09e;
+}
+.color-theme-green a:link {
+  color: #1d1d5c;
+}
+.color-theme-green a:visited {
+  color: #2f1d3d;
+}
+.color-theme-green a:active {
+  color: #511e1e;
+}
+
 footer a:link {
   color: #CFCFF4;
 }

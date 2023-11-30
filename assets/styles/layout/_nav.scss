@@ -1,7 +1,16 @@
+@use '../abstracts/variables' as *;
+
 /*nav rules*/
-nav {
-    a {
-        width: 5.5em;
-        text-align: center;
-    }
+.navigation {
+    margin: 2rem;
+    padding: 0 1.5rem;
+}
+
+.navigation-link {
+    display: inline-block;
+    width: calc(6rem + 0.25vw);
+    text-align: center;
+    margin: 0.5rem;
+    padding: 1em;
+    border-radius: 1em;
 }
