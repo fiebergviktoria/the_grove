@@ -1,0 +1,56 @@
+@use '../abstracts/variables';
+
+.grid-top {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.grid-header {
+    grid-column: 1/5;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.grid-top-navigation {
+    display: grid;
+    grid-column: 5/10;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+}
+
+.grid-aside {
+    display: grid;
+    grid-column: 10/13;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+}
+
+.grid-main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+.grid-figure {
+    grid-column: 1/10;
+}
+.grid-section {
+    grid-column: 2/12;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+.grid-text {
+    grid-column: 2/6;
+}
+.grid-form {
+    grid-column: 8/12;
+}
+
+.grid-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 6fr;
+}
+
+.grid-footer-navigation {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    place-items: center;
+}

@@ -28,7 +28,7 @@ img {
 
 ul {
     list-style-position: inside;
-    margin: 1rem;
+    margin: 0.5rem;
     padding: 0;
 }
 
@@ -45,17 +45,22 @@ ul {
     }
 }
 
-.main {
-    margin: 2rem;
+.sticky {
+    position: sticky;
+    top: 0;
+}
+
+.top {
+    margin: 0 2rem;
+    border-top: 2rem solid variables.$light_gray;
 }
 
 .heading {
     margin: 0;
 }
 
-.sticky {
-    position: sticky;
-    top: 0;
+.main {
+    margin: 0 2rem;
 }
 
 .inline-block {

@@ -13,35 +13,39 @@
   </head>
 
   <body>
-    <div class="sticky color-theme-gray">
-		  <header class="color-theme-neutral">
+    <div class="sticky top grid-top color-theme-gray">
+		  <header class="color-theme-neutral grid-header">
         <hgroup>
-          <h1 class="position-heading-outside heading"><a href="index.html">The Grove</a></h1>
+          <h1 class="heading"><a href="index.html">The Grove</a></h1>
           <p>sun salutations, mindful moments and cozy corners</p>
         </hgroup>
         <img src="assets/images/illustrations/the_grove_light.svg" alt="logo light design" width="100" height="104">
         <!--<span class="grid-item6"></span>
         <span class="grid-item7"></span>-->
       </header>
-      <nav class="navigation">
+      <nav class="navigation color-theme-neutral grid-top-navigation">
         <a href="courses.html" class="navigation-link navigation-link-color">courses</a>
         <a href="studio.html" class="navigation-link navigation-link-color">studio</a>
         <a href="team.html" class="navigation-link navigation-link-color">team</a>
         <a href="contact.html" class="navigation-link navigation-link-color">contact</a>
+      </nav>
+      <aside class="navigation color-theme-gray grid-aside">
         <a class="account-link-color navigation-link">sign in</a>
         <a class="account-link-color navigation-link">sign up</a>
         <button type="button" class="change-theme">Placeholder</button>
-      </nav>
+      </aside>
     </div>
-    <main class="main">
-      <figure class="color-theme-neutral">
+    <main class="main grid-main">
+      <figure class="color-theme-neutral grid-figure">
         <img src="assets/images/illustrations/downward_dog.svg" alt="yoga pose illustration" width="360" height="270">
       </figure>
-      <section>
+      <section class="grid-section">
+        <div class="grid-text color-theme-green">
         <h2 class="heading">welcome to the grove</h2>
         <aside>we are happy you have found your way here, why don't you take a few moments for yourself?
            take a seat and breathe for a bit...</aside>
-        <section class="color-theme-green">
+        </div>
+        <section class="color-theme-green grid-form">
           <h3 class="heading">new here?</h3>
           <form>
             <label>E-Mail:<input type="email"></label>
@@ -64,15 +68,17 @@
           </form>
         </section>
       </section>
-      <figure class="color-theme-neutral">
+      <figure class="color-theme-neutral grid-figure">
         <img src="assets/images/illustrations/the_grove_light.svg" alt="logo" width="360" height="270">
       </figure>
-      <section>
+      <section class="grid-section">
+        <div class="grid-text">
         <h2 class="heading">want to try it first?</h2>
         <aside>no matter if you are a beginner or an expert everyone is welcome in the grove,
           to help you on this journey we offer a free trial course,
           just pick a date and time from the following list</aside>
-        <section class="color-theme-green">
+        </div>
+        <section class="color-theme-green grid-form">
           <h3 class="heading">registration:</h3>
           <form>
             <input type="radio" name="nextcourse" id="courseone"><label for="courseone">course one</label>
@@ -82,36 +88,38 @@
           </form>
         </section>
       </section>
-      <figure class="color-theme-neutral">
+      <figure class="color-theme-neutral grid-figure">
         <img src="assets/images/studio/studio_inside_scaled.jpg" alt="studio/team picture" width="360" height="270">
       </figure>
-      <section>
+      <section class="grid-section">
+        <div class="grid-text">
         <h2 class="heading">want to take a peek first?</h2>
         <aside>it is important to take a break from everyday life now and then,
           to support this short leave we strive for a relaxed atmosphere</aside>
-        <section class="color-theme-green">
+        </div>
+        <section class="color-theme-green grid-form">
           <h3 class="heading">see for yourself</h3>
           <a href="studio.html">take a tour through our studio</a> or <a href="team.html">meet the team</a>
         </section>
       </section>
-      <figure class="color-theme-neutral">
+      <figure class="color-theme-neutral grid-figure">
         <img src="../cozy_corners/assets/images/library/library01_scaled.jpg" alt="cafe library" width="360" height="270">
       </figure>
-      <section>
+      <section class="grid-section">
+        <div class="grid-text">
         <h2 class="heading">want to venture forth with us?</h2>
         <aside>if you want to extend your stay with us or yoga just isn't for you</aside>
-        <section class="color-theme-green">
+        </div>
+        <section class="color-theme-green grid-form">
           <h3 class="heading">cozy corners</h3>
           <p>come and visit our <a href="../cozy_corners/index.html">cafe</a></p>
         </section>
       </section>
     </main>
-		<footer class="sticky">
-      <section class="inline-block">
-        <a href="index.html"><h2 class="heading">The Grove</h2></a>
-        <img src="assets/images/illustrations/the_grove_light.svg" alt="logo light design" width="100" height="104">
-      </section>
-      <nav class="footer-navigation inline-block">
+		<footer class="sticky grid-footer">
+      <a href="index.html"><h2 class="heading">The Grove</h2></a>
+      <img src="assets/images/illustrations/the_grove_light.svg" alt="logo light design" width="100" height="104">
+      <nav class="footer-navigation inline-block grid-footer-navigation">
         <a class="account-link-color navigation-link">sign in</a>
         <a class="account-link-color navigation-link">sign up</a>
         <ul class="inline-block">Courses:
